@@ -1,66 +1,71 @@
 @import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap');
-*{
+
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: "Rajdhani", sans-serif;
 }
-body{
+
+body {
     width: 100vw;
     height: 100vh;
     background-color: rgb(23, 22, 22);
     display: flex;
     align-items: center;
     justify-content: center;
-
+    padding: 10px;
 }
-.container{
+
+.container {
     width: 70%;
     height: 90%;
-    background: linear-gradient( to top,rgba(4, 160, 177, 0.11) , rgba(240, 188, 240, 0.692));
+    background: linear-gradient(to top, rgba(4, 160, 177, 0.11), rgba(240, 188, 240, 0.692));
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    box-shadow: 2px 2px 10px rgb(4, 160, 177) , -2px -2px 10px rgb(240, 188, 240);
-    border: none;
+    box-shadow: 2px 2px 10px rgb(4, 160, 177), -2px -2px 10px rgb(240, 188, 240);
     border-radius: 30px;
-    padding: 10px;
-    box-sizing: border-box;
+    padding: 15px;
     gap: 20px;
 }
-h1{
-    font-size: 40px;
-    text-shadow: 2px 2px 10px rgb(4, 160, 177) ;
+
+h1 {
+    font-size: 3vw;
+    text-shadow: 2px 2px 10px rgb(4, 160, 177);
+    text-align: center;
 }
-.input{
+
+.input {
     width: 90%;
-    height: 30%;
-    background: linear-gradient(to right ,  rgb(3, 19, 22) , rgb(160, 161, 235));
+    padding: 10px;
+    background: linear-gradient(to right, rgb(3, 19, 22), rgb(160, 161, 235));
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: center;
     flex-direction: column;
     color: aliceblue;
-    font-size: 25px;
+    font-size: 1.5vw;
     border-radius: 20px;
 }
-#input{
+
+#input {
     width: 70%;
     height: 40px;
-    background-color:  rgba(10, 46, 49, 0.68);
+    background-color: rgba(10, 46, 49, 0.68);
     border: none;
     border-radius: 20px;
-    box-shadow: 2px 2px 10px rgb(4, 160, 177) , -2px -2px 10px rgb(240, 188, 240);
-    font-size: 20px;
+    font-size: 1.2vw;
     color: aliceblue;
-    padding: 15px;
-    box-sizing: border-box;
+    padding: 10px;
+    text-align: center;
 }
-#btn{
+
+#btn {
     width: 200px;
     height: 50px;
-    background-color:  rgba(10, 46, 49, 0.68);
+    background-color: rgba(10, 46, 49, 0.68);
     border: none;
     border-radius: 20px;
     font-size: 20px;
@@ -70,51 +75,51 @@ h1{
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 5px;
     cursor: pointer;
-
 }
-#btn:hover{
+
+#btn:hover {
     background: transparent;
 }
 
-.output{
+.output {
     width: 90%;
     height: 55%;
     display: flex;
     align-items: center;
-    justify-content: space-around;
-    
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
 }
-.image{
+
+.image {
     width: 70%;
     height: 100%;
-    background: linear-gradient(to right ,  rgb(3, 19, 22) , rgb(160, 161, 235));
+    background: linear-gradient(to right, rgb(3, 19, 22), rgb(160, 161, 235));
     display: flex;
     align-items: center;
     justify-content: center;
-    border: none;
     border-radius: 20px;
     position: relative;
 }
-.btns{
+
+.btns {
     width: 25%;
     height: 100%;
-    background: linear-gradient(to right ,  rgb(3, 19, 22) , rgb(160, 161, 235));
+    background: linear-gradient(to right, rgb(3, 19, 22), rgb(160, 161, 235));
     display: flex;
     align-items: center;
     justify-content: center;
-    border: none;
     border-radius: 20px;
     flex-direction: column;
-    gap: 90px;
-
-
+    gap: 30px;
+    padding: 10px;
 }
-#download{
+
+#download, #reset {
     width: 150px;
     height: 50px;
-    background-color:  rgba(10, 46, 49, 0.68);
+    background-color: rgba(10, 46, 49, 0.68);
     border: none;
     border-radius: 20px;
     font-size: 20px;
@@ -124,129 +129,112 @@ h1{
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 5px;
     cursor: pointer;
-
 }
-#reset{
-    width: 150px;
-    height: 50px;
-    background-color:  rgba(10, 46, 49, 0.68);
-    border: none;
-    border-radius: 20px;
-    font-size: 20px;
-    color: aliceblue;
-    box-shadow: 2px 2px 10px rgb(4, 160, 177);
-    transition: all 0.3s;
-    display: flex;
-    align-items: center;
-    cursor: pointer;
-    justify-content: center;
-    gap: 5px;
 
-}
-#download:hover{
+#download:hover, #reset:hover {
     background: transparent;
 }
-#reset:hover{
-    background: transparent;
-}
-#image{
+
+#image {
     width: 65%;
     height: 90%;
     background-size: cover;
-    border: none;
     border-radius: 20px;
     display: none;
 }
-#loading{
+
+#loading {
     position: absolute;
     width: 10%;
-    filter:drop-shadow(2px 2px 10px black) ;
+    filter: drop-shadow(2px 2px 10px black);
     display: none;
 }
-@media (max-width : 1200px) {
-    .container{
+
+/* Responsive Adjustments */
+@media (max-width: 1200px) {
+    .container {
         width: 90%;
     }
-    
-    
-}
-@media (max-width : 900px){
-
-
-.container{
-    flex-direction: column;
-}
-#image {
-    width: 50%;
-}
-.image {
-    width: 100%;
-    height: 64%;}
-
-    .btns{
-        width: 100%;
-    height: 25%; 
-    flex-direction: row;
+    h1 {
+        font-size: 2.5vw;
     }
-    .output{
+    .input {
+        font-size: 1.5vw;
+    }
+    #input {
+        font-size: 1.2vw;
+    }
+}
+
+@media (max-width: 900px) {
+    .container {
+        flex-direction: column;
+    }
+    #image {
+        width: 50%;
+    }
+    .image {
+        width: 100%;
+        height: 64%;
+    }
+    .btns {
+        width: 100%;
+        height: 25%;
+        flex-direction: row;
+        gap: 10px;
+    }
+    .output {
         flex-direction: column;
     }
 }
 
-@media (max-width : 570px){
-
+@media (max-width: 570px) {
     h1 {
-        font-size: 30px;
-    }
-    .input{
         font-size: 20px;
     }
-    #input{
-        font-size: 15px;
+    .input {
+        font-size: 18px;
+    }
+    #input {
+        font-size: 14px;
     }
     #image {
-        width: 60%;
-      }
+        width: 70%;
+    }
 }
-@media (max-width : 450px){
 
-    .container{
+@media (max-width: 450px) {
+    .container {
         width: 100%;
         height: 100%;
-        border-radius: 0px;
+        border-radius: 0;
     }
     h1 {
-        font-size: 22px;
-      }
-      .input {
-        font-size: 15px;
-      }
-      #input {
+        font-size: 18px;
+    }
+    .input {
+        font-size: 16px;
+    }
+    #input {
         width: 90%;
-        font-size:12px ;
-      }
-      #btn {
-        width: 150px;
-        height: 35px;
-        font-size: 15px;
-}
-.btns{
-    justify-content: space-around;
-    gap: 0px;
-}
-#download {
-    width: 110px;
-    height: 35px;
-    font-size: 15px;
-}
-#reset {
-    width: 110px;
-    height: 35px;
-    font-size: 15px;
-}
-#image {
-    width: 85%;
-  }
+        font-size: 12px;
+    }
+    #btn {
+        width: 140px;
+        height: 40px;
+        font-size: 14px;
+    }
+    .btns {
+        justify-content: space-around;
+        gap: 5px;
+    }
+    #download, #reset {
+        width: 120px;
+        height: 40px;
+        font-size: 14px;
+    }
+    #image {
+        width: 85%;
+    }
 }
